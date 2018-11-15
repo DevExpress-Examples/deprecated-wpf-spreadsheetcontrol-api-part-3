@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [DataValidationActions.cs](./CS/SpreadsheetControl_WPF_API_Part03/CodeExamples/DataValidationActions.cs) (VB: [DataValidationActions.vb](./VB/SpreadsheetControl_WPF_API_Part03/CodeExamples/DataValidationActions.vb))
+<!-- default file list end -->
 # WPF SpreadsheetControl API - Part 3
 
 
