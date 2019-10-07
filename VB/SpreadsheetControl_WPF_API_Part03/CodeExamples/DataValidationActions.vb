@@ -77,10 +77,10 @@ Namespace SpreadsheetControl_API_Part03
 			workbook.LoadDocument("Documents\DataValidation.xlsx")
 			Dim worksheet As Worksheet = workbook.Worksheets(0)
 
-			' Create a union range.
-			Dim range As Range = worksheet.Range.Union(worksheet("F4:F5"), worksheet("F6:F11"))
-			' Restrict data entry to a number within limits.
-			worksheet.DataValidations.Add(range, DataValidationType.Decimal, DataValidationOperator.Between, 10, 40)
+            ' Create a union range.
+            Dim range As CellRange = worksheet.Range.Union(worksheet("F4:F5"), worksheet("F6:F11"))
+            ' Restrict data entry to a number within limits.
+            worksheet.DataValidations.Add(range, DataValidationType.Decimal, DataValidationOperator.Between, 10, 40)
 
 			' Highlight data validation ranges.
 			Dim MyColorScheme() As Integer = { &HFFC4C4, &HFFD9D9, &HFFF6F6, &HFFECEC, &HE9D3D3 }
