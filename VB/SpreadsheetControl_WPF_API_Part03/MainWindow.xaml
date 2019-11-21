@@ -1,4 +1,4 @@
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit"
@@ -24,17 +24,20 @@
 
             <Label x:Name="codeExampleNameLbl" Grid.Row="0" FontSize="26.667" SnapsToDevicePixels="True" Padding="9,0,0,4">Example:</Label>
 
-            <dx:DXTabControl x:Name="tabControl" Grid.Row="1" Grid.Column="0" SelectionChanged="tabControl_SelectionChanged">
-                <dx:DXTabItem Header="CS" Width="250">
+            <dx:DXTabControl x:Name="tabControl" Grid.Row="1" Grid.Column="0" SelectionChanged="tabControl_SelectionChanged" SelectedIndex="0">
+            <dx:DXTabControl.View>
+                <dx:TabControlStretchView HeaderLocation="Top"/>
+            </dx:DXTabControl.View>
+            <dx:DXTabItem Header="CS">
                     <dxre:RichEditControl x:Name="richEditControlCS" ActiveViewType="Simple" />
                 </dx:DXTabItem>
-            <dx:DXTabItem Header="VB" Width="250">
-                <dxre:RichEditControl x:Name="richEditControlVB" ActiveViewType="Simple" />
-                </dx:DXTabItem>
-            <dx:DXTabItem Header="CSHelper" Width="250">
+            <dx:DXTabItem Header="CSHelper">
                 <dxre:RichEditControl x:Name="richEditControlCSClass" ActiveViewType="Simple" />
             </dx:DXTabItem>
-            <dx:DXTabItem Header="VBHelper" Width="250">
+            <dx:DXTabItem Header="VB">
+                <dxre:RichEditControl x:Name="richEditControlVB" ActiveViewType="Simple" />
+                </dx:DXTabItem>
+             <dx:DXTabItem Header="VBHelper">
                 <dxre:RichEditControl x:Name="richEditControlVBClass" ActiveViewType="Simple" />
             </dx:DXTabItem>
         </dx:DXTabControl>
